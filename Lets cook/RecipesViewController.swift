@@ -59,3 +59,9 @@ extension RecipesViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension RecipesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.searchRecipeWith(searchText)
+    }
+}
