@@ -17,4 +17,10 @@ class Interactor {
             output(requesResult)
         }
     }
+    
+    func getRecipeDetail(id: Int,  output: @escaping (RequestResult<RecipeDetail>) -> Void) {
+        reposity.getRecipeDetail(id: id) { (requestResult) in
+            output(requestResult)
+        }
+    }
 }

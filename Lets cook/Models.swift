@@ -13,10 +13,17 @@ enum RequestResult<T> {
     case error(String)
 }
 
-
 struct Recipe: Codable {
     let id: Int
     let title: String
+}
+
+struct RecipeDetail: Codable {
+    let id: Int
+    let title: String
+    let rating: Int
+    let image: String
+    let instructions: String
 }
 
 extension Decodable {

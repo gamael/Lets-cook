@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6068867A2611785B004B18AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606886792611785B004B18AE /* AppDelegate.swift */; };
 		6068867C2611785B004B18AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068867B2611785B004B18AE /* SceneDelegate.swift */; };
-		6068867E2611785B004B18AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068867D2611785B004B18AE /* ViewController.swift */; };
 		606886812611785B004B18AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6068867F2611785B004B18AE /* Main.storyboard */; };
 		6068868326117862004B18AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6068868226117862004B18AE /* Assets.xcassets */; };
 		6068868626117862004B18AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6068868426117862004B18AE /* LaunchScreen.storyboard */; };
@@ -18,13 +17,14 @@
 		6068869226118383004B18AE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869126118383004B18AE /* Repository.swift */; };
 		6068869426118478004B18AE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869326118478004B18AE /* Models.swift */; };
 		6068869626118908004B18AE /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869526118908004B18AE /* AppInteractor.swift */; };
+		6068869826119E32004B18AE /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869726119E32004B18AE /* RecipeDetailViewController.swift */; };
+		6068869A2611A06F004B18AE /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606886992611A06F004B18AE /* RecipeDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		606886762611785B004B18AE /* Lets cook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lets cook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606886792611785B004B18AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6068867B2611785B004B18AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6068867D2611785B004B18AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		606886802611785B004B18AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6068868226117862004B18AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6068868526117862004B18AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +34,8 @@
 		6068869126118383004B18AE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		6068869326118478004B18AE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6068869526118908004B18AE /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
+		6068869726119E32004B18AE /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		606886992611A06F004B18AE /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,14 @@
 		606886782611785B004B18AE /* Lets cook */ = {
 			isa = PBXGroup;
 			children = (
+				6068869726119E32004B18AE /* RecipeDetailViewController.swift */,
 				606886792611785B004B18AE /* AppDelegate.swift */,
 				6068867B2611785B004B18AE /* SceneDelegate.swift */,
-				6068867D2611785B004B18AE /* ViewController.swift */,
 				6068868D26117DA5004B18AE /* RecipesViewController.swift */,
 				6068867F2611785B004B18AE /* Main.storyboard */,
 				6068868226117862004B18AE /* Assets.xcassets */,
 				6068868426117862004B18AE /* LaunchScreen.storyboard */,
+				606886992611A06F004B18AE /* RecipeDetailPresenter.swift */,
 				6068868726117862004B18AE /* Info.plist */,
 				6068868F26118112004B18AE /* RecipesPresenter.swift */,
 				6068869126118383004B18AE /* Repository.swift */,
@@ -154,10 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6068868E26117DA5004B18AE /* RecipesViewController.swift in Sources */,
-				6068867E2611785B004B18AE /* ViewController.swift in Sources */,
 				6068869626118908004B18AE /* AppInteractor.swift in Sources */,
+				6068869826119E32004B18AE /* RecipeDetailViewController.swift in Sources */,
 				6068869026118112004B18AE /* RecipesPresenter.swift in Sources */,
 				6068867A2611785B004B18AE /* AppDelegate.swift in Sources */,
+				6068869A2611A06F004B18AE /* RecipeDetailPresenter.swift in Sources */,
 				6068867C2611785B004B18AE /* SceneDelegate.swift in Sources */,
 				6068869226118383004B18AE /* Repository.swift in Sources */,
 				6068869426118478004B18AE /* Models.swift in Sources */,
