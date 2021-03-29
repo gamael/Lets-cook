@@ -24,6 +24,7 @@ class RecipesViewController: UIViewController {
     
     struct Constants {
         static let reuseIdentifier = "recipeCellID"
+        static let showDetailSegue = "showDetail"
     }
     
     override func viewDidLoad() {
@@ -45,6 +46,16 @@ class RecipesViewController: UIViewController {
         recipeTableView.isHidden = false
         tableViewSource = recipes
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.showDetailSegue {
+            guard let row = sender as? Int,
+                let vc = segue.destination as? RecipeDetailViewController else {
+                return
+            }
+            vc.recipeId = tableViewSource[row].id
+        }
+    }
 }
 
 extension RecipesViewController: UITableViewDataSource {
@@ -57,6 +68,13 @@ extension RecipesViewController: UITableViewDataSource {
         cell.textLabel?.text = tableViewSource[indexPath.row].title
         cell.detailTextLabel?.text = tableViewSource[indexPath.row].title
         return cell
+    }
+}
+
+extension RecipesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: Constants.showDetailSegue, sender: indexPath.row)
     }
 }
 

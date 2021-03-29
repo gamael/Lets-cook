@@ -29,6 +29,6 @@ class RecipeDetailViewController: UIViewController {
     
     func updateViewWith(recipe: RecipeDetail) {
         recipeTitle.text = recipe.title
-        recipeDetails.text = recipe.title
+        recipeDetails.text = recipe.instructions
     }
 }
