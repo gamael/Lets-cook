@@ -15,10 +15,11 @@
 		6068868E26117DA5004B18AE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068868D26117DA5004B18AE /* RecipesViewController.swift */; };
 		6068869026118112004B18AE /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068868F26118112004B18AE /* RecipesPresenter.swift */; };
 		6068869226118383004B18AE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869126118383004B18AE /* Repository.swift */; };
-		6068869426118478004B18AE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869326118478004B18AE /* Models.swift */; };
+		6068869426118478004B18AE /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869326118478004B18AE /* Entities.swift */; };
 		6068869626118908004B18AE /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869526118908004B18AE /* AppInteractor.swift */; };
 		6068869826119E32004B18AE /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869726119E32004B18AE /* RecipeDetailViewController.swift */; };
 		6068869A2611A06F004B18AE /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606886992611A06F004B18AE /* RecipeDetailPresenter.swift */; };
+		6068869C2611AF11004B18AE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068869B2611AF11004B18AE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +33,11 @@
 		6068868D26117DA5004B18AE /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		6068868F26118112004B18AE /* RecipesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPresenter.swift; sourceTree = "<group>"; };
 		6068869126118383004B18AE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		6068869326118478004B18AE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6068869326118478004B18AE /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		6068869526118908004B18AE /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
-		6068869726119E32004B18AE /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		6068869726119E32004B18AE /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeDetailViewController.swift; path = "Lets cook/Controllers/RecipeDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		606886992611A06F004B18AE /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
+		6068869B2611AF11004B18AE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,21 +70,86 @@
 		606886782611785B004B18AE /* Lets cook */ = {
 			isa = PBXGroup;
 			children = (
-				6068869726119E32004B18AE /* RecipeDetailViewController.swift */,
-				606886792611785B004B18AE /* AppDelegate.swift */,
-				6068867B2611785B004B18AE /* SceneDelegate.swift */,
-				6068868D26117DA5004B18AE /* RecipesViewController.swift */,
-				6068867F2611785B004B18AE /* Main.storyboard */,
-				6068868226117862004B18AE /* Assets.xcassets */,
-				6068868426117862004B18AE /* LaunchScreen.storyboard */,
-				606886992611A06F004B18AE /* RecipeDetailPresenter.swift */,
+				606886A52611B0C8004B18AE /* Views */,
+				606886A42611B0A2004B18AE /* Interactors */,
+				606886A02611B069004B18AE /* App */,
+				6068869E2611AFF4004B18AE /* Presenters */,
+				6068869D2611AFDF004B18AE /* Controllers */,
+				6068869F2611B01F004B18AE /* Models */,
 				6068868726117862004B18AE /* Info.plist */,
-				6068868F26118112004B18AE /* RecipesPresenter.swift */,
-				6068869126118383004B18AE /* Repository.swift */,
-				6068869526118908004B18AE /* AppInteractor.swift */,
-				6068869326118478004B18AE /* Models.swift */,
 			);
 			path = "Lets cook";
+			sourceTree = "<group>";
+		};
+		6068869D2611AFDF004B18AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6068869726119E32004B18AE /* RecipeDetailViewController.swift */,
+				6068868D26117DA5004B18AE /* RecipesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6068869E2611AFF4004B18AE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				606886992611A06F004B18AE /* RecipeDetailPresenter.swift */,
+				6068868F26118112004B18AE /* RecipesPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		6068869F2611B01F004B18AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6068869126118383004B18AE /* Repository.swift */,
+				6068869326118478004B18AE /* Entities.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		606886A02611B069004B18AE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6068869B2611AF11004B18AE /* Extensions.swift */,
+				606886A22611B073004B18AE /* Resources */,
+				606886A12611B06E004B18AE /* Config */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		606886A12611B06E004B18AE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				606886792611785B004B18AE /* AppDelegate.swift */,
+				6068867B2611785B004B18AE /* SceneDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		606886A22611B073004B18AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6068868226117862004B18AE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		606886A42611B0A2004B18AE /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				6068869526118908004B18AE /* AppInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		606886A52611B0C8004B18AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6068867F2611785B004B18AE /* Main.storyboard */,
+				6068868426117862004B18AE /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +228,11 @@
 				6068869826119E32004B18AE /* RecipeDetailViewController.swift in Sources */,
 				6068869026118112004B18AE /* RecipesPresenter.swift in Sources */,
 				6068867A2611785B004B18AE /* AppDelegate.swift in Sources */,
+				6068869C2611AF11004B18AE /* Extensions.swift in Sources */,
 				6068869A2611A06F004B18AE /* RecipeDetailPresenter.swift in Sources */,
 				6068867C2611785B004B18AE /* SceneDelegate.swift in Sources */,
 				6068869226118383004B18AE /* Repository.swift in Sources */,
-				6068869426118478004B18AE /* Models.swift in Sources */,
+				6068869426118478004B18AE /* Entities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
