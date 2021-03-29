@@ -10,21 +10,52 @@ import UIKit
 
 class RecipesViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var backgroundMessage: UILabel!
+    @IBOutlet weak var recipeTableView: UITableView!
+    
+    var tableViewSource = [Recipe]() {
+        didSet {
+            recipeTableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    let presenter = RecipesPresenter()
+    
+    struct Constants {
+        static let reuseIdentifier = "recipeCellID"
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.setView(view: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
+    
+    func updateViewWith(message: String) {
+        recipeTableView.isHidden = true
+        backgroundMessage.text = message
+    }
+    
+    func updateViewWith(recipes: [Recipe]) {
+        recipeTableView.isHidden = false
+        tableViewSource = recipes
+    }
+}
 
+extension RecipesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
+        cell.textLabel?.text = tableViewSource[indexPath.row].title
+        cell.detailTextLabel?.text = tableViewSource[indexPath.row].title
+        return cell
+    }
 }
