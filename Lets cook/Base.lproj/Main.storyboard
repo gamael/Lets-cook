@@ -104,21 +104,30 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIM-eU-QMH">
-                                <rect key="frame" x="20" y="408.5" width="374" height="17"/>
+                                <rect key="frame" x="20" y="483" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NA6-x3-rOa">
+                                <rect key="frame" x="20" y="388.5" width="374" height="74.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NA6-x3-rOa" secondAttribute="height" multiplier="5:1" id="QGf-ol-Ljx"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ibD-Gn-rww" firstAttribute="trailing" secondItem="NA6-x3-rOa" secondAttribute="trailing" constant="20" id="5a8-ca-SxV"/>
                             <constraint firstItem="kRT-AJ-b8B" firstAttribute="leading" secondItem="ibD-Gn-rww" secondAttribute="leading" constant="20" id="9V2-OL-Hru"/>
                             <constraint firstItem="ibD-Gn-rww" firstAttribute="trailing" secondItem="kRT-AJ-b8B" secondAttribute="trailing" constant="20" id="D8e-Wl-T1U"/>
-                            <constraint firstItem="oIM-eU-QMH" firstAttribute="top" secondItem="kRT-AJ-b8B" secondAttribute="bottom" constant="30" id="FPT-ob-wdd"/>
                             <constraint firstItem="RRV-Cx-O14" firstAttribute="top" secondItem="ibD-Gn-rww" secondAttribute="top" constant="20" id="Fd4-UQ-Udv"/>
                             <constraint firstItem="ibD-Gn-rww" firstAttribute="trailing" secondItem="RRV-Cx-O14" secondAttribute="trailing" constant="20" id="Gfu-zC-gjp"/>
                             <constraint firstItem="oIM-eU-QMH" firstAttribute="leading" secondItem="ibD-Gn-rww" secondAttribute="leading" constant="20" id="b7j-I8-shF"/>
+                            <constraint firstItem="oIM-eU-QMH" firstAttribute="top" secondItem="NA6-x3-rOa" secondAttribute="bottom" constant="20" id="jmd-tj-g9z"/>
                             <constraint firstItem="ibD-Gn-rww" firstAttribute="trailing" secondItem="oIM-eU-QMH" secondAttribute="trailing" constant="20" id="jzP-Mc-2pp"/>
+                            <constraint firstItem="NA6-x3-rOa" firstAttribute="leading" secondItem="ibD-Gn-rww" secondAttribute="leading" constant="20" id="tGJ-iR-vkE"/>
+                            <constraint firstItem="NA6-x3-rOa" firstAttribute="top" secondItem="kRT-AJ-b8B" secondAttribute="bottom" constant="10" id="xfU-jd-66r"/>
                             <constraint firstItem="kRT-AJ-b8B" firstAttribute="top" secondItem="RRV-Cx-O14" secondAttribute="bottom" constant="20" id="ySa-YA-VKY"/>
                             <constraint firstItem="RRV-Cx-O14" firstAttribute="leading" secondItem="ibD-Gn-rww" secondAttribute="leading" constant="20" id="zIE-mp-ByF"/>
                         </constraints>
@@ -129,6 +138,7 @@
                         <outlet property="recipeDetails" destination="oIM-eU-QMH" id="x8K-qD-rKv"/>
                         <outlet property="recipeTimage" destination="kRT-AJ-b8B" id="Pkr-CB-wtB"/>
                         <outlet property="recipeTitle" destination="RRV-Cx-O14" id="zJF-4j-hkB"/>
+                        <outlet property="starsStackView" destination="NA6-x3-rOa" id="Tng-zH-kBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzS-xy-Gwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
